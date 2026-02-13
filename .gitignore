@@ -1,0 +1,6 @@
+*.rpyc
+.vscode/
+images/
+music/
+sounds/
+video/
