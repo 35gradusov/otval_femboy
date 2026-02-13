@@ -4,7 +4,7 @@ label thirty_five_grad_init:
         config.hard_rollback_limit = 0
         config.rollback_enabled = False
         _game_menu_screen = u''
-        #сеня пидор
+        #сеня пидор123
 
 
     window hide
