@@ -49,11 +49,11 @@ init -1:
 
 
         #звуки
-        thirty_five_grad_button_hover_sound                                         = thirty_five_grad_sounds_directory+'ui/button_hover.wav'
-        thirty_five_grad_button_release_sound                                       = thirty_five_grad_sounds_directory+'ui/button_release.wav'
+        thirty_five_grad_button_hover_sound                                         = thirty_five_grad_sounds_directory+'button_hover.wav'
+        thirty_five_grad_button_release_sound                                       = thirty_five_grad_sounds_directory+'button_release.wav'
         thirty_five_grad_button_page_sound                                          = thirty_five_grad_sounds_directory+'repl_page_turning_5_7dl.ogg'
         thirty_five_grad_low_battery_headphones                                     = thirty_five_grad_sounds_directory+'low_battery_headphones.mp3'
-        thirty_five_grad_glitch_transition_1                                        = thirty_five_grad_sounds_directory+'ui/glitch_transition.mp3'
+        thirty_five_grad_glitch_transition_1                                        = thirty_five_grad_sounds_directory+'glitch_transition.mp3'
         thirty_five_grad_head_heartbeat                                             = thirty_five_grad_sounds_directory+'head_heartbeat.ogg'
         thirty_five_grad_fall_grass                                                 = thirty_five_grad_sounds_directory+'fall_grass.ogg'
         thirty_five_grad_old_desktop_pc_booting_up                                  = thirty_five_grad_sounds_directory+"old_desktop_pc_booting_up.mp3"
