@@ -36,7 +36,7 @@ init -1 python:
         config.window_hide_transition                                                   = persistent.thirty_five_grad_window_hide_transition_old
         config.exit_transition                                                          = persistent.thirty_five_grad_exit_transition_old
         preferences.text_cps                                                            = persistent.thirty_five_grad_text_speed_old
-    config.developer = True
+
 
 
     def thirty_five_grad_screens_active():

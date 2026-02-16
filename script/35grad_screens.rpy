@@ -707,7 +707,7 @@ init 1:
                 hover_sound thirty_five_grad_button_hover_sound
                 activate_sound thirty_five_grad_button_release_sound
                 style "thirty_five_grad_text_normal" text_style "thirty_five_grad_text_normal" 
-                action [Hide('load', transition=Dissolve(0.3)), thirty_five_grad_FunctionCallback(thirty_five_grad_on_load_callback, selected_slot),FileLoad(selected_slot,confirm=False), ShowMenu('load'), ]
+                action [Hide('load', transition=Dissolve(0.3)), thirty_five_grad_FunctionCallback(thirty_five_grad_on_load_callback, selected_slot),FileLoad(selected_slot,confirm=False), ShowMenu('load')]
 
             textbutton "Удалить":
                 text_outlines [(1,"#000000",2,2)]

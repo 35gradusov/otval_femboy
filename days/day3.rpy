@@ -40,19 +40,16 @@
     'Боже, да это же тот, который вчера тонул!'
 
     # (спрайт пионера)
-    show 35grad_semyon 1 normal pio at thirty_five_grad_sunset_lighting with dissolve:
-        xalign 0.5
-    if persistent.thirty_five_grad_blur_pref:
-        show bg ext_houses_sunset at thirty_five_grad_blur
+    show 35grad_semyon 1 normal pio at center with dissolve
     thirty_five_grad_pi 'Эм, привет.'
 
     thirty_five_grad_alex 'И тебе не хворать. Что-то хотел?'
-    show 35grad_semyon 1 normal happy pio with dspr
+
     thirty_five_grad_pi 'Да. Спасибо, правда, спасибо дружище, что спас меня вчера! Ты даже не представляешь, наверное, как я тогда испугался.'
     thirty_five_grad_pi 'А потом испугался ещё раз, когда ты уже тонул...'
 
     thirty_five_grad_alex 'Пустяки.'
-    show 35grad_semyon 1 normal pio with dspr
+    show 35grad_semyon 1 normal happy pio with dspr
     thirty_five_grad_pi 'Но всё равно спасибо. Я у тебя в долгу. Если что, обращайся.'
 
     thirty_five_grad_alex 'Ладно. Не тони только во второй раз.'
@@ -61,8 +58,6 @@
 
     # (спрайт пропадает)
     hide 35grad_semyon with dissolve
-    if persistent.thirty_five_grad_blur_pref:
-        show bg ext_houses_sunset at thirty_five_grad_deblur
     'Мы пожали друг другу руки и двинулись в разных направлениях. С виду совершенно обычный парень, который внешне особо-то и не выделялся, кроме как коричневых волос.'
     'Да и в принципе я о нём долго не думал, так как голова была забита совершенно другими вещами, например, как мне отсюда выбраться и то, стоит ли вообще идти до Мику в принципе...'
 
@@ -73,8 +68,6 @@
 
     # (спрайт Слави в форме)
     show 35grad_slavya 2 laugh sport with dissolve
-    if persistent.thirty_five_grad_blur_pref:
-        show bg ext_houses_sunset at thirty_five_grad_blur
     thirty_five_grad_sl 'О, утречка, Лёша! Ну что, у меня приятная новость с утра!'
 
     thirty_five_grad_alex 'И тебе утра, Славянка. Выиграла в лотерею?'
@@ -91,8 +84,6 @@
     show 35grad_slavya 2 smile sport with dspr
     thirty_five_grad_alex 'Забавно, забавно. Ладно, прости уж, пожалуйста.'
     hide 35grad_slavya 2 smile sport with dissolve
-    if persistent.thirty_five_grad_blur_pref:
-        show bg ext_houses_sunset at thirty_five_grad_deblur
     'Но за место ответа девушка лишь ласково улыбнулась мне и лёгкой трусцой убежала от меня.'
     'Надеюсь, она и правда не держит на меня зла, потому что не хочется потом извиняться перед ней. Ну, не то, чтобы мне лень, просто не хочу лишней драмы...'
 
@@ -101,8 +92,6 @@
     scene bg int_house_of_mt_sunset with fade
     'Зайдя уже наконец-то в домик, я понял, что мне не следовало этого делать...'
     show 35grad_olga 2 angry paj at center with dissolve
-    if persistent.thirty_five_grad_blur_pref:
-        show bg int_house_of_mt_sunset at thirty_five_grad_blur
     play sound sfx_open_dooor_campus_1
     thirty_five_grad_mt 'Какого лешего ты так рано встал? Ещё шумел так, как будто стаю цыган пригласил!'
 
@@ -131,6 +120,7 @@
 
     thirty_five_grad_mt 'А потому что луна не в той фазе, плюс звёзды на небе не сошлись. Меньше вопросов, больше дела.'
     thirty_five_grad_mt 'Через полчаса приедет грузовик с едой, и кто-то должен будет его разгрузить.'
+    show 35grad_alex 1 normal pio at veryfarleft
     thirty_five_grad_alex 'И? Вы думаете, это буду я?'
     show 35grad_olga 2 normal paj with dspr
     thirty_five_grad_mt 'Не думаю, а знаю.'
@@ -157,8 +147,7 @@
     # (затемнение (раньше это было обычное моргание))
     # (музыка стоп)
     # (фон внутри музклуба с утра)
-    scene bg thirty_five_grad_int_music_club_sunset with fade
-    play sound sfx_open_door_1
+    scene bg int_musclub_day with fade
     play ambience ambience_music_club_day fadein 4
     'По пути мне встретилась Лена, но она сделал вид, как будто и вовсе меня не знает. Думаю, можно понять, от чего такая реакция, особенно после вчерашнего.'
     'Ведь я так и не успел извиниться перед ней.'
@@ -171,10 +160,7 @@
     'Но внутри никого не было. Странно. Почему это дверь открыта, а хозяйки нет? Непорядок.'
 
     # (спрайт Мику улыбающийся)
-    show 35grad_miku 2 laughter pio ponytails at thirty_five_grad_sunset_lighting_revers with dissolve:
-        xalign 0.5
-    if persistent.thirty_five_grad_blur_pref:
-        show bg thirty_five_grad_int_music_club_sunset at thirty_five_grad_blur
+    show 35grad_miku 2 laughter pio ponytails at center with dissolve
     thirty_five_grad_mi 'Доброе утро, Лёша! Что-то ты опоздал немного. Хотя я тоже, представляешь? Так что ничего страшного! Как у тебя дела?'
 
     'Мику появилась так неожиданно. Но это не испугало меня, а наоборот, словно заставило собраться в кучку.'
@@ -185,10 +171,7 @@
     'А ещё галстук, который хорошо сочетается с её резинками для волос. М-м-м, волосы...'
     show 35grad_miku 3 smile pio ponytails with dspr
     thirty_five_grad_mi 'Ой, ещё только утро, а я уже купаюсь в тёплых словах! Лёш, разбалуешь же!'
-    # попросить пашку дать вырезанную версию цг или попросить его поменять бг
-    scene bg thirty_five_grad_int_music_club_sunset at thirty_five_grad_blur
-    show thirty_five_grad_hug at thirty_five_grad_sunset_lighting_revers with fade:
-        xalign 0.5
+
     'Мы по-дружески обнялись, хоть и быстро. И даже так, это было довольно внезапно!'
 
     thirty_five_grad_alex 'Слушай, а тебе не тяжело?'
@@ -196,30 +179,21 @@
     thirty_five_grad_mi 'В плане?'
 
     # (спрайт Мику обычный)
-    hide thirty_five_grad_hug with dissolve
-    scene bg thirty_five_grad_int_music_club_sunset at thirty_five_grad_deblur
-    show 35grad_miku 1 normal pio ponytails at thirty_five_grad_sunset_lighting_revers with dspr:
-        xalign 0.5
-    if persistent.thirty_five_grad_blur_pref:
-        show bg thirty_five_grad_int_music_club_sunset at thirty_five_grad_blur
     thirty_five_grad_alex 'Носить настолько длинные волосы. Без спору, они очень красивы, но...'
-    show 35grad_miku 1 smile pio ponytails with dspr
+
     thirty_five_grad_mi 'А. Это. Привыкаешь! Тем более что я всё равно думала после лагеря их состричь.'
 
     thirty_five_grad_alex 'Ух, не надо. Извини, что возможно, это и звучит эгоистично, но я хотел бы их оставить, так как они тебе очень идут.'
-    show 35grad_miku 1 thoughtful pio ponytails with dspr
+
     'Мику отвела от меня взгляд и прошла вглубь клуба.'
 
     thirty_five_grad_mi 'Хм. Хорошо. Если ты так говоришь...'
 
     thirty_five_grad_alex 'Кстати, а почему клуб не закрыт был? Потому что мало ли. Вдруг сама знаешь, кто может прийти.'
-    show 35grad_miku 1 smile pio ponytails with dspr
+
     thirty_five_grad_mi 'А. Так я же буквально перед тобой его открыла! Просто кое-куда, ты понимаешь, отходила, а потом прихожу, а ты тут!'
 
     # (Мику пропадает)
-    hide 35grad_miku 1 smile pio ponytails with dissolve
-    if persistent.thirty_five_grad_blur_pref:
-        show bg thirty_five_grad_int_music_club_sunset at thirty_five_grad_deblur
     'Снова наступила тишина. Только вот она исчезла под стуком туфель об деревянный пол, выбивая своеобразную мелодию.'
     'Я тоже не стал стоять столбом и двинулся к полкам с книгами.'
     'На них стояли как романы, так и подходящая под данное помещение литература. Нотные грамоты, учебники и дамская романтика.'
@@ -227,10 +201,6 @@
     '«Самоучитель по японскому языку».'
 
     # (спрайт Мику обычный)
-    show 35grad_miku 1 normal pio ponytails at thirty_five_grad_sunset_lighting_revers with dissolve:
-        xalign 0.5
-    if persistent.thirty_five_grad_blur_pref:
-        show bg thirty_five_grad_int_music_club_sunset at thirty_five_grad_blur
     thirty_five_grad_mi 'Заинтересовался книжками?'
 
     'Ласково спросила Мику.'
@@ -240,19 +210,17 @@
     thirty_five_grad_mi 'А-а-а! Так это я для себя, чтобы язык не забывать. Всё же он мне и самой нравится. Так что... {w}О-о-о!'
 
     thirty_five_grad_alex 'М?'
-    show 35grad_miku 2 laughter pio ponytails with dissolve_fast
+
     thirty_five_grad_alex 'Да нет, забудь. Просто мысль пришла, которая... В общем! Тебе же интересно, зачем я попросила о помощи?'
 
     thirty_five_grad_mi 'Конечно! Я сегодня полночи не спал, всё думал, зачем ты меня пригласила.'
 
     # (Мику испуганная)
-    show 35grad_miku 2 fear pio ponytails with dspr
     'Её личико сменилось на полное тревоги и ужас лицо.'
 
     thirty_five_grad_alex 'М-мику! Да я же пошутил!'
 
     # (Мику улыбающаяся)
-    show 35grad_miku 3 smile pio ponytails with dissolve_fast
     thirty_five_grad_mi 'Бака!'
 
     'А затем нежно хлопнуло меня по руке.'
@@ -262,26 +230,19 @@
     'Я залился румянцем.'
 
     thirty_five_grad_alex 'Ты переживаешь за меня?'
-    show 35grad_miku 3 dreamy pio ponytails with dissolve_fast
+
     thirty_five_grad_mi 'Конечно же! Ты мой друг.'
 
     '...Друг. Такое приятное доброе слово, и само отношение, которое заслужить бывает очень непросто. Но всё же я бесконечно рад, что она видит во мне друга.'
 
     thirty_five_grad_alex 'И ты мой тоже. Поэтому я и согласился помочь.'
-    show 35grad_miku 2 laughter pio ponytails with dissolve_fast
+
     thirty_five_grad_mi 'Я знаю, Лёшка! А теперь...'
 
     # (Мику пропадает)
-    hide 35grad_miku 2 laughter pio ponytails with dissolve
-    if persistent.thirty_five_grad_blur_pref:
-        show bg thirty_five_grad_int_music_club_sunset at thirty_five_grad_deblur
     'Девушка зашла в подсобку. Что-то копалась она там продолжительное время, поэтому, как только я уже хотел подойти, Мику вышла сама. Держа в руке...'
 
     # (спрайт Мику улыбающаяся)
-    show 35grad_miku 3 smile pio ponytails at thirty_five_grad_sunset_lighting_revers with dissolve:
-        xalign 0.5
-    if persistent.thirty_five_grad_blur_pref:
-        show bg thirty_five_grad_int_music_club_sunset at thirty_five_grad_blur
     '...Швабру и ведро...'
 
     thirty_five_grad_mi 'Генеральная уборка!'
@@ -291,9 +252,6 @@
     # (музыка стоп)
     # (затемнение (раньше это было обычное моргание))
     # (обычный эмбиенс музклуба)
-    stop music fadeout 1
-    play ambience ambience_music_club_day fadein 4
-    scene bg black at thirty_five_grad_vhs with fade 
     'Мне, как мужчине досталась тяжёлая работа: я разбирал от брошенного в разных случайных местах хлама в кладовке, а Мику мыла полы в основном зале.'
     'Дверь из кладовки была открыта, поэтому прекрасно видел, чем занимается трудолюбивая девушка. И я сейчас даже не про Славю.'
     'Мику тщательно протирала пол, мочила тряпку и снова протирала, да так быстро и чётко, словно занималась этим всю жизнь.'
@@ -307,32 +265,22 @@
     'Но даже так она всё равно немного капала, отчего мне было стыдно.'
 
     # (Мику испуганная)
-    scene bg thirty_five_grad_int_music_club_sunset with fade
-    show 35grad_miku 2 fear pio ponytails at thirty_five_grad_sunset_lighting_revers with dspr:
-        xalign 0.5
-    if persistent.thirty_five_grad_blur_pref:
-        show bg thirty_five_grad_int_music_club_sunset at thirty_five_grad_blur
     'Конечно, хотелось обратиться к Мику за помощью, чтобы она дала аптечку. Вот только я и слова сказать не успел.'
     'Она сама обращается взглядом ко мне, и в нём читается настоящий дикий ужас.'
     'Без слов. Она ловко обходит меня и стрелой кидается в злополучную подсобку.'
 
     # (Мику пропадает и тут же появляется)
-    hide 35grad_miku 2 fear pio ponytails with dissolve
-    pause 0.3
-    show 35grad_miku 2 fear pio ponytails at thirty_five_grad_sunset_lighting_revers with dissolve:
-        xalign 0.5
     # (музыка) MIKULOVE
-    play music thirty_five_grad_mikumylove fadein 3
     'Недолго копаясь, выходит уже оттуда с небольшой коробочкой, которая всё равно плотно набита, а затем берёт меня за здоровую руку и усаживает на стул.'
 
     thirty_five_grad_alex 'М-мику. Но пол снова заляпается.'
-    show 35grad_miku 2 angry pio ponytails with dspr
+
     thirty_five_grad_mi 'Да всё равно мне! Тебе же больно! Давай сейчас я быстренько всё сделаю, ты даже не почувствуешь!'
 
     'А оно так и было! Если не считать воздействия перекиси, конечно.'
     'Затем Мику тряпочкой аккуратно вытерла оставшуюся кровь, и мы с ней увидели, что рана была довольно глубокой.'
     'Удивительно было также, что она толком и не болела, лишь мышцы немного дёргались, отчего рука дрожала.'
-    show 35grad_miku 2 sad pio ponytails with dspr
+
     thirty_five_grad_mi 'Бедняжка, как же ты так? Ох, потерпи немножко, я помогу, и будешь как новенький!'
 
     'Её пальчики ловко совершали первую помощь: Ещё раз обработала вокруг раны перекисью и йодом, достала бинт, отмерила, сколько необходимо, и отрезала маникюрными ножничками, которые заранее лежали в коробочке.'
@@ -342,7 +290,6 @@
     thirty_five_grad_mi 'Ока-сан меня научила. Говорила, что поможет мне в жизни! Раньше думала, зачем мне это, я же аккуратна всегда во всём.'
 
     # (Мику улыбается)
-    show 35grad_miku 2 normal pio ponytails with dspr
     thirty_five_grad_mi 'А тут видишь! Она была всё же права.'
 
     thirty_five_grad_alex 'Согласен. Редко, когда мамы ошибаются.'
@@ -356,7 +303,6 @@
     thirty_five_grad_alex 'Не. Сделано на отлично! Мику, чем мне отплатить за такую доброту?'
 
     # (Мику покрасневшая)
-    show 35grad_miku 3 shy pio ponytails with dspr
     thirty_five_grad_mi 'Лёша, бака, только тем, что ты рядом...'
 
     'И мы оба превратились в парочку зрелых томатов. Ха! Как мило. Я такие сцены только в кино да в аниме видел.'
@@ -365,41 +311,35 @@
     thirty_five_grad_alex 'Скажешь тоже. Ладно, благодарю ещё раз покорно! Я продолжу работать.'
 
     'Но она легонько остановила меня, прикоснувшись к моему локтю указательным пальцем.'
-    show 35grad_miku 3 dreamy pio ponytails with dspr
+
     thirty_five_grad_mi 'Я имею в виду, что хватит с тебя работы на сегодня. Тем более ты и так просто прекрасно убрался там.'
 
     thirty_five_grad_alex 'Это был сарказм?'
 
     # (Мику обычная)
-    show 35grad_miku 2 normal pio ponytails with dissolve_fast
     thirty_five_grad_mi 'Нет, что ты! Да и я уже убралась на самом деле.'
 
     thirty_five_grad_alex 'Мы с тобой хорошую работу проделали.'
-    show 35grad_miku 3 smile pio ponytails with dissolve_fast
+
     thirty_five_grad_mi 'Это уж точно! Поэтому, хочешь я тебе... спою?'
 
     thirty_five_grad_alex 'Ты ещё спрашиваешь? Только перед этим, ответь, пожалуйста. Почему надо было вставать прямо с раннего утра?'
-    show 35grad_miku 3 laughter pio ponytails with dspr
+
     thirty_five_grad_mi 'Ответ прост! Чтобы тебя кто-нибудь другой работой не завалил. Кроме меня.'
 
     'Её красивый, милый, чистый смех заполнил комнату. Мне он нравился. Но сейчас будет момент не то что истины, а то, чего я ожидал.'
-    show 35grad_miku 3 smile pio ponytails with dspr
+
     thirty_five_grad_mi 'Ладушки. Ты готов к моему голосу?'
 
     thirty_five_grad_alex 'Но я же и так его сейчас слышу?'
 
     thirty_five_grad_mi 'Глупышка. Я о другом.'
-    hide 35grad_miku 3 smile pio ponytails with dissolve
-    if persistent.thirty_five_grad_blur_pref:
-        show bg thirty_five_grad_int_music_club_sunset at thirty_five_grad_deblur
+
     # (музыка стоп)
-    stop music fadeout 1.0
     'Мику готовилась к пению, разрабатывала горло и лёгкие. Меня всегда интересовало, как это люди вообще поют.'
     'Как меняется сам тон голоса, как звук становится таким и как происходит вообще этот красивый процесс.'
 
     # (музыка) Mikusong
-    play music music_list["miku_song_voice"]
-
     '...Я был словно в раю. И это даже не преувеличение. Пускай даже и не знал, о чём она поёт, так как делала она это на японском.'
     'Но какой же великолепный голос у неё! Живой, насыщенный, яркий! Что сказать, настоящий талант, дарованный небесами.'
     'А я всё слушал и слушал её, не мог остановиться, так же как и она не могла прекратить петь.'
@@ -407,22 +347,18 @@
     '...Но у того человека, который отвечал за горн, были свои планы...'
 
     # (музыка стоп)
-    stop music fadeout 1.0
     # (Мику счастливая)
-    show 35grad_miku 2 laughter pio ponytails at thirty_five_grad_sunset_lighting_revers with dissolve:
-        xalign 0.5
     thirty_five_grad_mi 'Ой... Лёшка! Как тебе?! Если что-то не понравилось, говори сразу! Так с твоей помощью я могу стать лучше!'
 
     thirty_five_grad_alex 'Куда ещё лучше? Ты поёшь круче, чем многие на эстраде. Блин, да я слушал и слушал бы тебя вечно! Серьёзно, твой тон – это нечто.'
     thirty_five_grad_alex 'Боги точно не обделили тебя способностью и талантами.'
-    show 35grad_miku 1 smile pio ponytails with dissolve_fast
+
     thirty_five_grad_mi 'Ох, Лёша-Лёша. Это не способности, это тренировки! Упорные, тяжёлые, долгие, стоящие здоровья.'
     thirty_five_grad_mi 'Но я рада, очень-очень рада, что тебе понравилось. Старалась...'
 
     thirty_five_grad_alex 'А... что по переводу?'
 
     # (Мику покраснела)
-    show 35grad_miku 3 shy pio ponytails with dissolve_fast
     'На что Мику внезапно растерялась. Словно я задел её чувства.'
 
     thirty_five_grad_mi 'Эм... Просто набор звуков. Как ни странно! Но звучит красиво, согласись? Из-за иностранности.'
@@ -430,7 +366,7 @@
     'Меня не устроил данный ответ, ведь я чувствовал, что она мне явно недоговаривает, но доказать этого не мог. Вот и стимул появился - учить язык!'
 
     thirty_five_grad_alex 'А теперь... мы пойдём на завтрак? А-то я проголодался.'
-    show 35grad_miku 3 laughter pio ponytails with dissolve_fast
+
     thirty_five_grad_mi 'Конечно пойдём! Как же иначе? Не хочу оставлять тебя голодным.'
 
     thirty_five_grad_alex 'Это взаимно.'
@@ -441,28 +377,24 @@
 
     # (затемнение (раньше это было обычное моргание))
     # (фон входа в столовую)
-    scene bg ext_dining_hall_near_sunset with fade
     'Завтрак был на удивление тихим. Хоть я и не явился на сегодняшнюю линейку но вроде, ничего даже страшного не произошло.'
     'Мы с Мику ещё немного пообщались обо всём и ни о чём одновременно и, в общем, хорошо провели время.'
     'Уже на улице, находясь под большой крышей перед входом в столовую, я облокотился об перила и смотрю вдаль.'
     'Передо мной хоть и открывается красивый вид, но он был удручающий.'
 
     # (музыка) Flawed Mangoes — Tunnel Vision
-    play music thirty_five_grad_flawed_mangoes fadein 3
-    'Вокруг леса, куда не глянь, словно это стены в концлагере. И только в одном месте их нет – на пляже.'
+    'Вок(del)руг леса, куда не глянь, словно это стены в концлагере. И только в одном месте их нет – на пляже.'
     'Там открывается совершенно другой вид, словно спасательный. Но мысли всё равно бесцеремонно лезут в голову, словно черви.'
     'Почему я здесь? Для чего? В этом мире, надеюсь что это всё-таки мой, просто в другое время. Но ничего не бывает просто так.'
     'У всего есть своя цель и замысел. Так какова моя тогда?'
 
     # (Мику обычная)
-    show 35grad_miku 1 normal pio ponytails with dissolvе
     thirty_five_grad_mi 'Лёш, всё в порядке?'
 
     'Тихо подошла Мику, став рядом со мной. Её волосы были словно повсюду, как вторая речка.'
     'Мне хотелось до них дотронуться, проверить, реальны ли они. Похоже, подсознательно я так и сделал.'
 
     # (Мику покраснела)
-    show 35grad_miku 3 shy pio ponytails with dissolve_fast
     thirty_five_grad_mi 'Ой, так вот какой твой ответ...'
 
     'Да, они были абсолютно реальны. Мягкие и шелковистые, они напоминали мне... А я даже не знаю. Они просто были хороши собой.'
@@ -471,7 +403,6 @@
     thirty_five_grad_alex 'Прости.'
 
     # (Мику улыбается)
-    show 35grad_miku 2 smile pio ponytails with dissolve_fast
     thirty_five_grad_mi 'Да, всё хорошо. Меня часто трогают за волосы. Особенно соседские дети у меня дома. И родители. Бывают так, как бы невзначай тронут.'
     thirty_five_grad_mi 'Но знаешь, только когда это сделал ты, я... Лёш? Всё в порядке? Ты резко погрустнел.'
 
@@ -483,13 +414,12 @@
 
     'Без понятия, почему сказал именно это. Вырвалось само. Или, может, так оно и было нужно. В конце-то концов, я это держал в себе практически всю жизнь.'
     'Хотя нет, знаю точно. Может, если я с ней поделюсь этим, мне и самому станет лучше?'
-    show 35grad_miku 2 sad pio ponytails with dspr 
+
     thirty_five_grad_mi 'А? Погоди... так вот почему ты вчера перед сном так странно смотрел за мой домик.'
 
     thirty_five_grad_alex 'Типа того. Понимаешь...'
 
     # (Мику обычная)
-    show 35grad_miku 1 normal pio ponytails with dissolve_fast
     'Я глянул на неё. В её глазках читалась небольшая тревога, но вместе с этим и интерес. Достаточно глубокий, чтобы как детектив, всё разузнать.'
 
     thirty_five_grad_alex 'Тебе это вообще будет интересно? Просто я не знаю, как это рассказать так, чтобы не выглядел плохо в твоих глазах.'

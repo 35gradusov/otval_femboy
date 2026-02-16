@@ -1,8 +1,11 @@
+
 label thirty_five_grad_init:
     python:
         config.hard_rollback_limit = 0
         config.rollback_enabled = False
         _game_menu_screen = u''
+        #сеня пидор123
+
 
     window hide
     scene bg black with fade

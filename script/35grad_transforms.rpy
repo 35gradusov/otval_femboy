@@ -77,60 +77,23 @@ init 1:
         u_fill_light_intensity (-0.8)  
 
 
-    transform thirty_five_grad_night_lighting_lamp:
-        mesh True
-        shader "MakeVisualNovels.SimulatedLighting"
-        u_rim_light_color (1.0, 1.0, 1.0)  
-        u_key_light_color (0.7, 0.7, 0.9)   
-        u_fill_light_color (1.0, 1.0, 1.0) # This is typically SUBTRACTED from the sprite since sprites are usually 100% lit.
-        # The size of the rim light relative to the size of the graphic you're putting this on.
-        u_rim_light_radius (0.5)
-        # Positions the effect of the rimlight
-        u_rim_light_position (0.5, 0.2)  
-        # This will be, on average, pretty close to most sprites' faces
-        # assuming they're nearly centered in their images and are about 20% down from the top
-        u_key_light_position (0.45, 0.2)  
-        u_key_light_radius (0.8)        # This is relative to the thing you're lighting. 0.5 is half the size of the thing.  
-        u_fill_light_direction (-1.0, 0.0)   # Direction of the rim light (from the side and behind)
-        u_rim_light_intensity (0.2)             # Intensity of the rim light
-        u_key_light_intensity (0.5)              # Intensity of the key light
-        # This is really a fill shadow, because light works differently on screens.
-        u_fill_light_intensity (-0.8)  
-
-    # transform thirty_five_grad_sunset_lighting:
-    #     mesh True
-    #     shader "MakeVisualNovels.SimulatedLighting"
-    #     u_rim_light_color (0.9, 0.7, 0.4)  
-    #     u_key_light_color (0.9, 0.7, 0.4)
-    #     u_fill_light_color (0.4, 0.9, 0.9)  
-    #     u_rim_light_radius (0.4)
-    #     u_key_light_position (0.1,0.182)
-    #     u_rim_light_position (0.1,0.182)
-    #     u_key_light_radius (0.6)    
-    #     u_fill_light_direction (-1.0, 0.0)  
-    #     u_rim_light_intensity (2.0)
-    #     u_key_light_intensity (0.8)
-    #     u_fill_light_intensity (-0.42)
-    #     pause 0
-    #     repeat
-    
     transform thirty_five_grad_sunset_lighting:
         mesh True
         shader "MakeVisualNovels.SimulatedLighting"
-        u_rim_light_color (1.0, 0.784, 0.471)  
-        u_key_light_color (1.0, 0.706, 0.4)
+        u_rim_light_color (0.9, 0.7, 0.4)  
+        u_key_light_color (0.9, 0.7, 0.4)
         u_fill_light_color (0.4, 0.9, 0.9)  
         u_rim_light_radius (0.4)
         u_key_light_position (0.1,0.182)
         u_rim_light_position (0.1,0.182)
         u_key_light_radius (0.6)    
         u_fill_light_direction (-1.0, 0.0)  
-        u_rim_light_intensity (0.2)
+        u_rim_light_intensity (2.0)
         u_key_light_intensity (0.8)
         u_fill_light_intensity (-0.42)
         pause 0
         repeat
-    
+
     transform thirty_five_grad_sunset_lighting_revers:
         mesh True
         shader "MakeVisualNovels.SimulatedLighting"
@@ -142,7 +105,7 @@ init 1:
         u_rim_light_position (0.9,0.182)
         u_key_light_radius (0.6)
         u_fill_light_direction (0.0, -1.0)
-        u_rim_light_intensity (0.2)
+        u_rim_light_intensity (2.0)
         u_key_light_intensity (0.8)
         u_fill_light_intensity (-0.42)
         pause 0
@@ -168,7 +131,7 @@ init 1:
 
     transform thirty_five_grad_picture_anim:
         subpixel True
-        zoom 0.5 rotate -30  xalign -2.1 yalign 0.4 
+        zoom 0.5 rotate -30  xalign -2.1 yalign 0.4
         on show:
             ease 2 rotate 10 xalign 0.5 yalign 0.5
         on hide:
@@ -235,11 +198,11 @@ init 1:
 
     transform thirty_five_grad_blur:
         blur 0
-        linear 1 blur 5
+        ease 1 blur 5
 
     transform thirty_five_grad_deblur:
         blur 5
-        linear 1 blur 0
+        ease 1 blur 0
 
 
 
@@ -390,34 +353,6 @@ init -1:
         pause(0.3)
         ease 0.75 xalign x xoffset xx yalign y alpha 1.0
 
-    transform thirty_five_grad_button_boosty_menu(y=0.98, x=0.998, xx=0.0):
-        subpixel True
-        xalign x yalign y xoffset xx alpha 0.0
-        xalign x yalign y xoffset-500 alpha 0.0
-        pause(0.3)
-        ease 0.75 xalign x xoffset xx yalign y alpha 1.0
-
-    transform thirty_five_grad_button_telegram_menu(y=0.98, x=0.958, xx=0.0):
-        subpixel True
-        xalign x yalign y xoffset xx alpha 0.0
-        xalign x yalign y xoffset-500 alpha 0.0
-        pause(0.3)
-        ease 0.75 xalign x xoffset xx yalign y alpha 1.0
-
-    transform thirty_five_grad_button_vk_menu(y=0.98, x=0.918, xx=0.0):
-        subpixel True
-        xalign x yalign y xoffset xx alpha 0.0
-        xalign x yalign y xoffset-500 alpha 0.0
-        pause(0.3)
-        ease 0.75 xalign x xoffset xx yalign y alpha 1.0
-
-    transform thirty_five_grad_button_steam_menu(y=0.98, x=0.878, xx=0.0):
-        subpixel True
-        xalign x yalign y xoffset xx alpha 0.0
-        xalign x yalign y xoffset-500 alpha 0.0
-        pause(0.3)
-        ease 0.75 xalign x xoffset xx yalign y alpha 1.0
-
     transform thirty_five_grad_button_5_menu(y=0.88, x=0.038, xx=0.0):
         subpixel True
         xalign x yalign y xoffset xx alpha 0.0
@@ -425,16 +360,12 @@ init -1:
         pause(0.35)
         ease 0.75 xalign x xoffset xx yalign y alpha 1.0
 
-
     transform thirty_five_grad_button_5_menu_nolat(y=0.88, x=0.038, xx=0.0):
         subpixel True
         xalign x yalign y xoffset xx alpha 0.0
         xalign x yalign y xoffset-500 alpha 0.0
         pause(0.35)
         ease 0.75 xalign x xoffset xx yalign y alpha 1.0
-
-
-
 
     transform thirty_five_grad_button_5_back_load_pref_hover(y=0.88, x=0.038, xx=0.0):
         subpixel True
@@ -449,6 +380,48 @@ init -1:
 
 
 
+    transform thirty_five_grad_button_steam_menu(y=0.98, x=0.878, yy=0.0):
+        subpixel True
+        xalign x yalign y yoffset yy alpha 0.0
+        xalign x yalign y yoffset+150 alpha 0.0
+        pause(0.3)
+        ease 0.75 xalign x yoffset yy yalign y alpha 1.0
+
+    transform thirty_five_grad_button_vk_menu(y=0.98, x=0.918, yy=0.0):
+        subpixel True
+        xalign x yalign y yoffset yy alpha 0.0
+        xalign x yalign y yoffset+150 alpha 0.0
+        pause(0.35)
+        ease 0.75 xalign x yoffset yy yalign y alpha 1.0
+
+    transform thirty_five_grad_button_telegram_menu(y=0.98, x=0.958, yy=0.0):
+        subpixel True
+        xalign x yalign y yoffset yy alpha 0.0
+        xalign x yalign y yoffset+150 alpha 0.0
+        pause(0.4)
+        ease 0.75 xalign x yoffset yy yalign y alpha 1.0
+
+    transform thirty_five_grad_button_boosty_menu(y=0.98, x=0.998, yy=0.0):
+        subpixel True
+        xalign x yalign y yoffset yy alpha 0.0
+        xalign x yalign y yoffset+150 alpha 0.0
+        pause(0.45)
+        ease 0.75 xalign x yoffset yy yalign y alpha 1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     transform thirty_five_grad_button_0_hover_menu(y=0.28, x=0.017,xx=6, yy=3):
         subpixel True
         xalign x yalign y xoffset-500 yoffset yy alpha 0.0
@@ -458,7 +431,7 @@ init -1:
             ease 0.5 xalign x yalign y xoffset-500 yoffset yy alpha 0.0
 
 
-    transform thirty_five_grad_button_1_hover_menu(y=0.4, x=0.02, xx=6, yy=3):
+    transform thirty_five_grad_button_1_hover_menu(y=0.4, x=0.02, xx=6, yy=2):
         subpixel True
         xalign x yalign y xoffset-500 yoffset yy alpha 0.0
         on show:
@@ -466,7 +439,7 @@ init -1:
         on hide:
             ease 0.5 xalign x yalign y xoffset-500 yoffset yy alpha 0.0
         
-    transform thirty_five_grad_button_2_hover_menu(y=0.52, x=0.023, xx=7, yy=-1):
+    transform thirty_five_grad_button_2_hover_menu(y=0.52, x=0.023, xx=5, yy=0):
         subpixel True
         xalign x yalign y xoffset-500 yoffset yy alpha 0.0
         on show:
@@ -482,45 +455,13 @@ init -1:
         on hide:
             ease 0.5 xalign x yalign y xoffset-500 yoffset yy alpha 0.0
 
-    transform thirty_five_grad_button_4_hover_menu(y=0.76, x=0.032, xx=6, yy=-4):
+    transform thirty_five_grad_button_4_hover_menu(y=0.76, x=0.032, xx=6, yy=-3):
         subpixel True
         xalign x yalign y xoffset-500 yoffset yy alpha 0.0
         on show:
             ease 0.5 xalign x xoffset xx yoffset yy yalign y alpha 1.0
         on hide:
             ease 0.5 xalign x yalign y xoffset-500 yoffset yy alpha 0.0
-
-    transform thirty_five_grad_button_boosty_hover_menu(y=0.98, x=0.998, xx=-6, yy=-5.3):
-        subpixel True
-        xalign x yalign y xoffset xx yoffset 500 alpha 0.0
-        on show:
-            ease 0.5 xalign x xoffset xx yoffset yy yalign y alpha 1.0
-        on hide:
-            ease 0.5 xalign x yalign y xoffset xx yoffset 500 alpha 0.0
-
-    transform thirty_five_grad_button_telegram_hover_menu(y=0.98, x=0.958, xx=-6, yy=-5.3):
-        subpixel True
-        xalign x yalign y xoffset xx yoffset 500 alpha 0.0
-        on show:
-            ease 0.5 xalign x xoffset xx yoffset yy yalign y alpha 1.0
-        on hide:
-            ease 0.5 xalign x yalign y xoffset xx yoffset 500 alpha 0.0
-
-    transform thirty_five_grad_button_vk_hover_menu(y=0.98, x=0.918, xx=-6, yy=-5.3):
-        subpixel True
-        xalign x yalign y xoffset xx yoffset 500 alpha 0.0
-        on show:
-            ease 0.5 xalign x xoffset xx yoffset yy yalign y alpha 1.0
-        on hide:
-            ease 0.5 xalign x yalign y xoffset xx yoffset 500 alpha 0.0
-
-    transform thirty_five_grad_button_steam_hover_menu(y=0.98, x=0.878, xx=-6, yy=-5.3):
-        subpixel True
-        xalign x yalign y xoffset xx yoffset 500 alpha 0.0
-        on show:
-            ease 0.5 xalign x xoffset xx yoffset yy yalign y alpha 1.0
-        on hide:
-            ease 0.5 xalign x yalign y xoffset xx yoffset 500 alpha 0.0
 
     transform thirty_five_grad_button_5_hover_menu(y=0.88, x=0.038, xx=7, yy=-9):
         subpixel True
@@ -529,6 +470,42 @@ init -1:
             ease 0.5 xalign x xoffset xx yoffset yy yalign y alpha 1.0
         on hide:
             ease 0.5 xalign x yalign y xoffset-500 yoffset yy alpha 0.0
+
+
+
+
+    transform thirty_five_grad_button_boosty_hover_menu(y=0.98, x=0.998, xx=-6, yy=-5.3):
+        subpixel True
+        xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+        on show:
+            ease 0.4 xalign x xoffset xx yoffset yy yalign y alpha 1.0
+        on hide:
+            ease 0.4 xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+
+    transform thirty_five_grad_button_telegram_hover_menu(y=0.98, x=0.958, xx=-6, yy=-5.3):
+        subpixel True
+        xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+        on show:
+            ease 0.4 xalign x xoffset xx yoffset yy yalign y alpha 1.0
+        on hide:
+            ease 0.4 xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+
+    transform thirty_five_grad_button_vk_hover_menu(y=0.98, x=0.918, xx=-6, yy=-5.3):
+        subpixel True
+        xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+        on show:
+            ease 0.4 xalign x xoffset xx yoffset yy yalign y alpha 1.0
+        on hide:
+            ease 0.4 xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+
+    transform thirty_five_grad_button_steam_hover_menu(y=0.98, x=0.878, xx=-6, yy=-5.3):
+        subpixel True
+        xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+        on show:
+            ease 0.4 xalign x xoffset xx yoffset yy yalign y alpha 1.0
+        on hide:
+            ease 0.4 xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+
 
 
 

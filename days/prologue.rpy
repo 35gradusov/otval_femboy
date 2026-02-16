@@ -31,13 +31,15 @@
 #         save_name = ('35°. Пролог')
 
 label thirty_five_grad_prologue:
+    scene bg black with dissolve
+    stop music fadeout 0.5
+    stop sound_loop fadeout 0.5
+    stop ambience fadeout 0.5
+    stop sound fadeout 0.5
+    $ renpy.pause(1.2, hard=True)
     $ renpy.display.screen.screens[("main_menu", None)] = renpy.display.screen.screens[("thirty_five_grad_main_menu", None)] 
     $ _game_menu_screen = 'game_menu_selector'
     scene bg thirty_five_grad_prolog_glitch_epil
-    stop music
-    stop sound_loop
-    stop ambience
-    stop sound
     play sound thirty_five_grad_glitch_transition_1
     $ renpy.pause(1.0, hard=True)
     show thirty_five_grad_transition_prolog_words at thirty_five_grad_words_anim
@@ -97,7 +99,7 @@ label thirty_five_grad_prologue:
     nvl hide dissolve
     nvl clear
     play ambience ambience_camp_center_night fadein 3
-    scene cg video_prolog
+    scene cg video_prolog with dissolve
     # $ renpy.pause(5.0, hard=True)
     # scene cg thirty_five_grad_alex_bus_station with fade
     $ renpy.pause(0.5, hard=True)
