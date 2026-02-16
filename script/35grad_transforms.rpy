@@ -131,7 +131,7 @@ init 1:
 
     transform thirty_five_grad_picture_anim:
         subpixel True
-        zoom 0.5 rotate -30  xalign -2.1 yalign 0.4 
+        zoom 0.5 rotate -30  xalign -2.1 yalign 0.4
         on show:
             ease 2 rotate 10 xalign 0.5 yalign 0.5
         on hide:
@@ -198,11 +198,11 @@ init 1:
 
     transform thirty_five_grad_blur:
         blur 0
-        linear 1 blur 5
+        ease 1 blur 5
 
     transform thirty_five_grad_deblur:
         blur 5
-        linear 1 blur 0
+        ease 1 blur 0
 
 
 
@@ -353,34 +353,6 @@ init -1:
         pause(0.3)
         ease 0.75 xalign x xoffset xx yalign y alpha 1.0
 
-    transform thirty_five_grad_button_boosty_menu(y=0.98, x=0.998, xx=0.0):
-        subpixel True
-        xalign x yalign y xoffset xx alpha 0.0
-        xalign x yalign y xoffset-500 alpha 0.0
-        pause(0.3)
-        ease 0.75 xalign x xoffset xx yalign y alpha 1.0
-
-    transform thirty_five_grad_button_telegram_menu(y=0.98, x=0.958, xx=0.0):
-        subpixel True
-        xalign x yalign y xoffset xx alpha 0.0
-        xalign x yalign y xoffset-500 alpha 0.0
-        pause(0.3)
-        ease 0.75 xalign x xoffset xx yalign y alpha 1.0
-
-    transform thirty_five_grad_button_vk_menu(y=0.98, x=0.918, xx=0.0):
-        subpixel True
-        xalign x yalign y xoffset xx alpha 0.0
-        xalign x yalign y xoffset-500 alpha 0.0
-        pause(0.3)
-        ease 0.75 xalign x xoffset xx yalign y alpha 1.0
-
-    transform thirty_five_grad_button_steam_menu(y=0.98, x=0.878, xx=0.0):
-        subpixel True
-        xalign x yalign y xoffset xx alpha 0.0
-        xalign x yalign y xoffset-500 alpha 0.0
-        pause(0.3)
-        ease 0.75 xalign x xoffset xx yalign y alpha 1.0
-
     transform thirty_five_grad_button_5_menu(y=0.88, x=0.038, xx=0.0):
         subpixel True
         xalign x yalign y xoffset xx alpha 0.0
@@ -388,16 +360,12 @@ init -1:
         pause(0.35)
         ease 0.75 xalign x xoffset xx yalign y alpha 1.0
 
-
     transform thirty_five_grad_button_5_menu_nolat(y=0.88, x=0.038, xx=0.0):
         subpixel True
         xalign x yalign y xoffset xx alpha 0.0
         xalign x yalign y xoffset-500 alpha 0.0
         pause(0.35)
         ease 0.75 xalign x xoffset xx yalign y alpha 1.0
-
-
-
 
     transform thirty_five_grad_button_5_back_load_pref_hover(y=0.88, x=0.038, xx=0.0):
         subpixel True
@@ -412,6 +380,48 @@ init -1:
 
 
 
+    transform thirty_five_grad_button_steam_menu(y=0.98, x=0.878, yy=0.0):
+        subpixel True
+        xalign x yalign y yoffset yy alpha 0.0
+        xalign x yalign y yoffset+150 alpha 0.0
+        pause(0.3)
+        ease 0.75 xalign x yoffset yy yalign y alpha 1.0
+
+    transform thirty_five_grad_button_vk_menu(y=0.98, x=0.918, yy=0.0):
+        subpixel True
+        xalign x yalign y yoffset yy alpha 0.0
+        xalign x yalign y yoffset+150 alpha 0.0
+        pause(0.35)
+        ease 0.75 xalign x yoffset yy yalign y alpha 1.0
+
+    transform thirty_five_grad_button_telegram_menu(y=0.98, x=0.958, yy=0.0):
+        subpixel True
+        xalign x yalign y yoffset yy alpha 0.0
+        xalign x yalign y yoffset+150 alpha 0.0
+        pause(0.4)
+        ease 0.75 xalign x yoffset yy yalign y alpha 1.0
+
+    transform thirty_five_grad_button_boosty_menu(y=0.98, x=0.998, yy=0.0):
+        subpixel True
+        xalign x yalign y yoffset yy alpha 0.0
+        xalign x yalign y yoffset+150 alpha 0.0
+        pause(0.45)
+        ease 0.75 xalign x yoffset yy yalign y alpha 1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     transform thirty_five_grad_button_0_hover_menu(y=0.28, x=0.017,xx=6, yy=3):
         subpixel True
         xalign x yalign y xoffset-500 yoffset yy alpha 0.0
@@ -421,7 +431,7 @@ init -1:
             ease 0.5 xalign x yalign y xoffset-500 yoffset yy alpha 0.0
 
 
-    transform thirty_five_grad_button_1_hover_menu(y=0.4, x=0.02, xx=6, yy=3):
+    transform thirty_five_grad_button_1_hover_menu(y=0.4, x=0.02, xx=6, yy=2):
         subpixel True
         xalign x yalign y xoffset-500 yoffset yy alpha 0.0
         on show:
@@ -429,7 +439,7 @@ init -1:
         on hide:
             ease 0.5 xalign x yalign y xoffset-500 yoffset yy alpha 0.0
         
-    transform thirty_five_grad_button_2_hover_menu(y=0.52, x=0.023, xx=7, yy=-1):
+    transform thirty_five_grad_button_2_hover_menu(y=0.52, x=0.023, xx=5, yy=0):
         subpixel True
         xalign x yalign y xoffset-500 yoffset yy alpha 0.0
         on show:
@@ -445,45 +455,13 @@ init -1:
         on hide:
             ease 0.5 xalign x yalign y xoffset-500 yoffset yy alpha 0.0
 
-    transform thirty_five_grad_button_4_hover_menu(y=0.76, x=0.032, xx=6, yy=-4):
+    transform thirty_five_grad_button_4_hover_menu(y=0.76, x=0.032, xx=6, yy=-3):
         subpixel True
         xalign x yalign y xoffset-500 yoffset yy alpha 0.0
         on show:
             ease 0.5 xalign x xoffset xx yoffset yy yalign y alpha 1.0
         on hide:
             ease 0.5 xalign x yalign y xoffset-500 yoffset yy alpha 0.0
-
-    transform thirty_five_grad_button_boosty_hover_menu(y=0.98, x=0.998, xx=-6, yy=-5.3):
-        subpixel True
-        xalign x yalign y xoffset xx yoffset 500 alpha 0.0
-        on show:
-            ease 0.5 xalign x xoffset xx yoffset yy yalign y alpha 1.0
-        on hide:
-            ease 0.5 xalign x yalign y xoffset xx yoffset 500 alpha 0.0
-
-    transform thirty_five_grad_button_telegram_hover_menu(y=0.98, x=0.958, xx=-6, yy=-5.3):
-        subpixel True
-        xalign x yalign y xoffset xx yoffset 500 alpha 0.0
-        on show:
-            ease 0.5 xalign x xoffset xx yoffset yy yalign y alpha 1.0
-        on hide:
-            ease 0.5 xalign x yalign y xoffset xx yoffset 500 alpha 0.0
-
-    transform thirty_five_grad_button_vk_hover_menu(y=0.98, x=0.918, xx=-6, yy=-5.3):
-        subpixel True
-        xalign x yalign y xoffset xx yoffset 500 alpha 0.0
-        on show:
-            ease 0.5 xalign x xoffset xx yoffset yy yalign y alpha 1.0
-        on hide:
-            ease 0.5 xalign x yalign y xoffset xx yoffset 500 alpha 0.0
-
-    transform thirty_five_grad_button_steam_hover_menu(y=0.98, x=0.878, xx=-6, yy=-5.3):
-        subpixel True
-        xalign x yalign y xoffset xx yoffset 500 alpha 0.0
-        on show:
-            ease 0.5 xalign x xoffset xx yoffset yy yalign y alpha 1.0
-        on hide:
-            ease 0.5 xalign x yalign y xoffset xx yoffset 500 alpha 0.0
 
     transform thirty_five_grad_button_5_hover_menu(y=0.88, x=0.038, xx=7, yy=-9):
         subpixel True
@@ -492,6 +470,42 @@ init -1:
             ease 0.5 xalign x xoffset xx yoffset yy yalign y alpha 1.0
         on hide:
             ease 0.5 xalign x yalign y xoffset-500 yoffset yy alpha 0.0
+
+
+
+
+    transform thirty_five_grad_button_boosty_hover_menu(y=0.98, x=0.998, xx=-6, yy=-5.3):
+        subpixel True
+        xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+        on show:
+            ease 0.4 xalign x xoffset xx yoffset yy yalign y alpha 1.0
+        on hide:
+            ease 0.4 xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+
+    transform thirty_five_grad_button_telegram_hover_menu(y=0.98, x=0.958, xx=-6, yy=-5.3):
+        subpixel True
+        xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+        on show:
+            ease 0.4 xalign x xoffset xx yoffset yy yalign y alpha 1.0
+        on hide:
+            ease 0.4 xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+
+    transform thirty_five_grad_button_vk_hover_menu(y=0.98, x=0.918, xx=-6, yy=-5.3):
+        subpixel True
+        xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+        on show:
+            ease 0.4 xalign x xoffset xx yoffset yy yalign y alpha 1.0
+        on hide:
+            ease 0.4 xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+
+    transform thirty_five_grad_button_steam_hover_menu(y=0.98, x=0.878, xx=-6, yy=-5.3):
+        subpixel True
+        xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+        on show:
+            ease 0.4 xalign x xoffset xx yoffset yy yalign y alpha 1.0
+        on hide:
+            ease 0.4 xalign x yalign y xoffset xx yoffset 150 alpha 0.0
+
 
 
 
