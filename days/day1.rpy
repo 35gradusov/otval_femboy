@@ -1702,6 +1702,8 @@ label thirty_five_grad_day_one:
 
     '...Внезапно даже для себя, моя нога топнула по деревянному полу достаточно громко, чтобы оглохнуть.'
 
+    play sound thirty_five_grad_oi1
+    thirty_five_grad_mi_unk 'Ой!'
     play sound sfx_piano_head_bump
     $ renpy.pause(1.0, hard=True)
 

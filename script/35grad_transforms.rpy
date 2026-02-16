@@ -80,20 +80,20 @@ init 1:
     transform thirty_five_grad_sunset_lighting:
         mesh True
         shader "MakeVisualNovels.SimulatedLighting"
-        u_rim_light_color (0.9, 0.7, 0.4)  
-        u_key_light_color (0.9, 0.7, 0.4)
+        u_rim_light_color (1.0, 0.784, 0.471)  
+        u_key_light_color (1.0, 0.706, 0.4)
         u_fill_light_color (0.4, 0.9, 0.9)  
         u_rim_light_radius (0.4)
         u_key_light_position (0.1,0.182)
         u_rim_light_position (0.1,0.182)
         u_key_light_radius (0.6)    
         u_fill_light_direction (-1.0, 0.0)  
-        u_rim_light_intensity (2.0)
+        u_rim_light_intensity (0.2)
         u_key_light_intensity (0.8)
         u_fill_light_intensity (-0.42)
         pause 0
         repeat
-
+    
     transform thirty_five_grad_sunset_lighting_revers:
         mesh True
         shader "MakeVisualNovels.SimulatedLighting"
@@ -105,7 +105,7 @@ init 1:
         u_rim_light_position (0.9,0.182)
         u_key_light_radius (0.6)
         u_fill_light_direction (0.0, -1.0)
-        u_rim_light_intensity (2.0)
+        u_rim_light_intensity (0.2)
         u_key_light_intensity (0.8)
         u_fill_light_intensity (-0.42)
         pause 0
